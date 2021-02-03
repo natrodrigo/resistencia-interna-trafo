@@ -19,11 +19,11 @@
             <hr>
             <div class="form-group">
                 <label>Vca(V)</label>
-                <input name="vca" type="number"  autofocus class="form-control" >
+                <input id="vca" type="text"  autofocus class="form-control" >
                 <label>Ica(V)</label>
-                <input name="ica" type="number"  autofocus class="form-control" >
+                <input id="ica" type="text"  autofocus class="form-control" >
                 <label>Pca(W)</label>
-                <input name="pca" type="number"  autofocus class="form-control" >
+                <input id="pca" type="text"  autofocus class="form-control" >
             </div>
             <div class="form-check form-check-inline">
                 <label>Medição realizada no: </label>
@@ -38,32 +38,33 @@
             <hr>
             <div class="form-group">
                 <label>Vcc(V)</label>
-                <input name="vcc" type="number"  autofocus class="form-control" >
+                <input id="vcc" type="text"  autofocus class="form-control" >
                 <label>Icc(V)</label>
-                <input name="icc" type="number"  autofocus class="form-control" >
+                <input id="icc" type="text"  autofocus class="form-control" >
                 <label>Pcc(W)</label>
-                <input name="pcc" type="number" autofocus class="form-control" >
+                <input id="pcc" type="text" autofocus class="form-control" >
             </div>
             <div class="form-check form-check-inline">
                 <label>Medição realizada no: </label>
-                <input class="form-check-input" type="radio" name="medicao2"  value="pri" >
+                <input class="form-check-input" type="radio" name="medicao2"  value="pri" required>
                 <label class="form-check-label">Primário</label>
-                <input class="form-check-input" type="radio" name="medicao2" value="sec" >
+                <input class="form-check-input" type="radio" name="medicao2" value="sec" required>
                 <label class="form-check-label">Secundário</label>
             </div>
         </div>
         
         <div id="vsvp" class="form-group container col-md-6">
             <label>Vs(V)</label>
-            <input name="vs" type="number"  autofocus class="form-control" >
+            <input id="vs" type="text"  autofocus class="form-control" >
             <label>Vp(V)</label>
-            <input name="vp" type="number"  autofocus class="form-control" >
+            <input id="vp" type="text"  autofocus class="form-control" >
             <button class="btn btn-primary" id="submit" type="submit" style="margin:20px 0px">Check</button>
         </div>
         
     </form>
-    </div>
     
+    </div>
+    <div id="feedback" class="alert alert-danger container p-5" role="alert"></div>
 <footer class="small text-center text-muted">
     Developed by Natã Rodrigo. Visit my <a href="https://github.com/natrodrigo" target="_blank">Github page</a>.
 </footer>

@@ -1,3 +1,6 @@
 #divforms{
     display:block;
 }
+#feedback{
+    display:none;
+}
