@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var vs = document.getElementById("vs").value.replace(",", ".");
     var vp = document.getElementById("vp").value.replace(",", ".");
     
+    var medca  = document.querySelector('input[name="medicao1"]:checked').value;
+    var medcc = document.querySelector('input[name="medicao2"]:checked').value;
 
     validate(vca);
     validate(ica);
@@ -38,11 +40,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     
-    var medca  = document.querySelector('input[name="medicao1"]:checked').value;
-    var medcc = document.querySelector('input[name="medicao2"]:checked').value;
     
-    function validate(value){
-        
+    
+    function validate(value){ 
         if (value==null || value == "" || value <= 0 || isNaN(value)){
              document.querySelector('#feedback').innerHTML = "Os valores não podem estar vazios, conter letras ou serem iguais ou menor que zero.";
              document.getElementById("feedback").style.display = "block";
