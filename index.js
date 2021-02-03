@@ -1,3 +1,7 @@
-function submit(){
-    document.getElementById("divforms").style.display = "none";
-}
+document.addEventListener('DOMContentLoaded', function(){
+submit.addEventListener('click', function(e){
+    
+    e.preventDefault();
+    console.log("funcionou.")
+});
+});
