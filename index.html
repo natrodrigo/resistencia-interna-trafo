@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de circuito equivalente de trafo</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Calculadora de circuito equivalente de trafo</title>
 </head>
 <body>
     <div class="container p-5" id="divforms">
@@ -17,17 +19,17 @@
             <hr>
             <div class="form-group">
                 <label>Vca(V)</label>
-                <input name="vca" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="vca" type="number"  autofocus class="form-control" >
                 <label>Ica(V)</label>
-                <input name="ica" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="ica" type="number"  autofocus class="form-control" >
                 <label>Pca(W)</label>
-                <input name="pca" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="pca" type="number"  autofocus class="form-control" >
             </div>
             <div class="form-check form-check-inline">
                 <label>Medição realizada no: </label>
-                <input class="form-check-input" type="radio" name="medicao1"  value="pri" required>
+                <input class="form-check-input" type="radio" name="medicao1"  value="pri">
                 <label class="form-check-label">Primário</label>
-                <input class="form-check-input" type="radio" name="medicao1" value="sec" required>
+                <input class="form-check-input" type="radio" name="medicao1" value="sec" >
                 <label class="form-check-label">Secundário</label>
             </div>
         </div>
@@ -36,31 +38,32 @@
             <hr>
             <div class="form-group">
                 <label>Vcc(V)</label>
-                <input name="vcc" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="vcc" type="number"  autofocus class="form-control" >
                 <label>Icc(V)</label>
-                <input name="icc" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="icc" type="number"  autofocus class="form-control" >
                 <label>Pcc(W)</label>
-                <input name="pcc" type="number" min="0" step="any" autofocus class="form-control" required>
+                <input name="pcc" type="number" autofocus class="form-control" >
             </div>
             <div class="form-check form-check-inline">
                 <label>Medição realizada no: </label>
-                <input class="form-check-input" type="radio" name="medicao2"  value="pri" required>
+                <input class="form-check-input" type="radio" name="medicao2"  value="pri" >
                 <label class="form-check-label">Primário</label>
-                <input class="form-check-input" type="radio" name="medicao2" value="sec" required>
+                <input class="form-check-input" type="radio" name="medicao2" value="sec" >
                 <label class="form-check-label">Secundário</label>
             </div>
         </div>
         
         <div id="vsvp" class="form-group container col-md-6">
             <label>Vs(V)</label>
-            <input name="vs" type="number" min="0" step="any" autofocus class="form-control" required>
+            <input name="vs" type="number"  autofocus class="form-control" >
             <label>Vp(V)</label>
-            <input name="vp" type="number" min="0" step="any" autofocus class="form-control" required>
-            <button class="btn btn-primary" id="btn-submit" type="submit" style="margin:20px 0px">Check</button>
+            <input name="vp" type="number"  autofocus class="form-control" >
+            <button class="btn btn-primary" id="submit" type="submit" style="margin:20px 0px">Check</button>
         </div>
         
     </form>
     </div>
+    
 <footer class="small text-center text-muted">
     Developed by Natã Rodrigo. Visit my <a href="https://github.com/natrodrigo" target="_blank">Github page</a>.
 </footer>
