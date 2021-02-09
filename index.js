@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){
     validate(pcc);
     validate(vs);
     validate(vp);
+
+    if (medca !="pri" & medca != "sec"){
+        validade(medca);
+    }
+    if (medcc !="pri" & medcc != "sec"){
+        validade(medcc);
+    }
     
     if (flag == 0){
         document.getElementById("feedback").style.display = "none";
@@ -61,21 +68,53 @@ document.addEventListener('DOMContentLoaded', function(){
         var rs = 0.1;
         var xs = 0.1;
 
-        rc_p = (vca ** 2) / pca;
-        z_phi_p = vca / ica;
-        xm_p = 1 / Math.sqrt(((1 / z_phi_p)**2) - ((1/rc_p)**2));
         a = vp/vs;
-        rc_s = rc_p / a**2;
-        z_phi_s = z_phi_p / a**2;
-        xm_s = xm_p / a**2;
+
+        if (medca == "pri"){
+            rc_p = (vca ** 2) / pca;
+            z_phi_p = vca / ica;
+            xm_p = 1 / Math.sqrt(((1 / z_phi_p)**2) - ((1/rc_p)**2));
+        
+            rc_s = rc_p / a**2;
+            z_phi_s = z_phi_p / a**2;
+            xm_s = xm_p / a**2;
+        }
+
+        else{
+            rc_s = (vca ** 2) / pca;
+            z_phi_s = vca / ica;
+            xm_s = 1 / Math.sqrt(((1 / z_phi_s)**2) - ((1/rc_s)**2));
+            
+
+            rc_p = rc_s * a**2;
+            z_phi_p = z_phi_s * a**2;
+            xm_p = xm_s * a**2;
+        }
+        
         pnucleo = vca**2 / rc_p;
-        zeq_p = vcc / icc;
-        req_p = pcc/ icc**2;
-        xeq_p = Math.sqrt(zeq_p**2 - req_p**2);
+        
+
+        if (medcc == "pri"){
+            zeq_p = vcc / icc;
+            req_p = pcc/ icc**2;
+            xeq_p = Math.sqrt(zeq_p**2 - req_p**2);
+            
+            zeq_s = zeq_p / a**2;
+            req_s = req_p / a**2;
+            xeq_s = xeq_p / a**2;
+        }
+
+        else{
+            zeq_s = vcc / icc;
+            req_s = pcc/ icc**2;
+            xeq_s = Math.sqrt(zeq_s**2 - req_s**2);
+            
+            zeq_p = zeq_s * a**2;
+            req_p = req_s * a**2;
+            xeq_p = xeq_s * a**2;
+        }
+
         pcu = icc**2 * req_p;
-        zeq_s = zeq_p / a**2;
-        req_s = req_p / a**2;
-        xeq_s = xeq_p / a**2;
 
         rp = req_p / 2;
         xp  = xeq_p / 2;
