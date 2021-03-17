@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     submit.addEventListener('click', function(e){
     
     e.preventDefault();
-    // document.getElementById("divforms").style.display = "none";
+    
     flag = 0;
     var vca = document.getElementById("vca").value.replace(",", ".");
     var ica = document.getElementById("ica").value.replace(",", ".");
@@ -209,9 +209,6 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById("results").style.display = "block";
     }
 
-
-    
-    
     
     function validate(value){ 
         if (value==null || value == "" || value <= 0 || isNaN(value)){
