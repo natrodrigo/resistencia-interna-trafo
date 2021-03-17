@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function(){
     validate(vp);
 
     if (medca !="pri" & medca != "sec"){
-        validade(medca);
+        validate(medca);
     }
     if (medcc !="pri" & medcc != "sec"){
-        validade(medcc);
+        validate(medcc);
     }
     
     if (flag == 0){
