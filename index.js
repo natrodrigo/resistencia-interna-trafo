@@ -8,10 +8,9 @@ var finalValues = {rc_p:.0, z_phi_p:.0, xm_p:.0, rc_s:.0,z_phi_s:.0,
 
 document.addEventListener('DOMContentLoaded', function(){
     submit.addEventListener('click', function(e){
-    e.preventDefault();
-    
+        e.preventDefault();
         getElementFromForms();
-        validateDatafromForms();
+        validateDataFromForms();
         convertDataToFloat();
         if (flag == 0){
             mathCalculate();
@@ -40,7 +39,7 @@ function getElementFromForms(){
 }
 
 
-function validateDatafromForms(){
+function validateDataFromForms(){
 
     for (var [key] of Object.entries(formValues)) {
         validate(formValues[key]);
