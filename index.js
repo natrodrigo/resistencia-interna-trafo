@@ -1,5 +1,5 @@
 var flag = 0;
-var formValues = {vca:0, ica:0, pca:0, vcc:0, icc:0, pcc:0, vs:0, vp:0};
+var formValues = {vca:0, ica:0, pca:0, vcc:0, icc:0, pcc:0, vp:0, vs:0};
 var medca = "";
 var medcc = "";
 var finalValues = {rc_p:.0, z_phi_p:.0, xm_p:.0, rc_s:.0,z_phi_s:.0, 
@@ -20,6 +20,58 @@ document.addEventListener('DOMContentLoaded', function(){
             printOnScreen();
         }
     })
+    
+
+    testeCApriCCpri.addEventListener('click', function(e){
+        e.preventDefault();
+        formValues = {vca:1500, ica:0.14, pca:21.4, vcc:31.3, icc:4, pcc:71.2, vp:2300, vs:230};
+        medca = "pri";
+        medcc = "pri";
+        mathCalculate();
+        formatFinalValues();
+        formValues.vp = decimal(formValues.vp);
+        formValues.vs = decimal(formValues.vs);
+        printOnScreen();
+    })
+
+
+    testeCApriCCsec.addEventListener('click', function(e){
+        e.preventDefault();
+        formValues = {vca:119, ica:0.11, pca:3.9, vcc:18.1, icc:8.7, pcc:38.1, vp:230, vs:115};
+        medca = "pri";
+        medcc = "sec";
+        mathCalculate();
+        formatFinalValues();
+        formValues.vp = decimal(formValues.vp);
+        formValues.vs = decimal(formValues.vs);
+        printOnScreen();
+    })
+
+
+    testeCAsecCCpri.addEventListener('click', function(e){
+        e.preventDefault();
+        formValues = {vca:240, ica:7.133, pca:400, vcc:489, icc:2.5, pcc:240, vp:8000, vs:240};
+        medca = "sec";
+        medcc = "pri";
+        mathCalculate();
+        formatFinalValues();
+        formValues.vp = decimal(formValues.vp);
+        formValues.vs = decimal(formValues.vs);
+        printOnScreen();
+    })
+
+
+    testeCAsecCCsec.addEventListener('click', function(e){
+        e.preventDefault();
+        formValues = {vca:115, ica:0.11, pca:3.9, vcc:17.1, icc:8.7, pcc:38.1, vp:230, vs:115};
+        medca = "sec";
+        medcc = "sec";
+        mathCalculate();
+        formatFinalValues();
+        formValues.vp = decimal(formValues.vp);
+        formValues.vs = decimal(formValues.vs);
+        printOnScreen();
+    })
 });
 
 
@@ -31,8 +83,8 @@ function getElementFromForms(){
     formValues.vcc = document.getElementById("vcc").value.replace(",", ".");
     formValues.icc = document.getElementById("icc").value.replace(",", ".");
     formValues.pcc = document.getElementById("pcc").value.replace(",", ".");
-    formValues.vs = document.getElementById("vs").value.replace(",", ".");
-    formValues.vp = document.getElementById("vp").value.replace(",", ".");
+    formValues.vp = document.getElementById("vs").value.replace(",", ".");
+    formValues.vs = document.getElementById("vp").value.replace(",", ".");
     
     medca  = document.querySelector('input[name="medicao1"]:checked').value;
     medcc = document.querySelector('input[name="medicao2"]:checked').value;
@@ -91,9 +143,9 @@ function mathCalculate(){
         finalValues.xm_s = 1 / Math.sqrt(((1 / finalValues.z_phi_s)**2) - ((1/finalValues.rc_s)**2));
         
 
-        finalValues.rc_p = finalValues.rc_s * a**2;
-        finalValues.z_phi_p = finalValues.z_phi_s * a**2;
-        finalValues.xm_p = finalValues.xm_s * a**2;
+        finalValues.rc_p = finalValues.rc_s * finalValues.a**2;
+        finalValues.z_phi_p = finalValues.z_phi_s * finalValues.a**2;
+        finalValues.xm_p = finalValues.xm_s * finalValues.a**2;
     }
     
     finalValues.pnucleo = formValues.vca**2 / finalValues.rc_p;
