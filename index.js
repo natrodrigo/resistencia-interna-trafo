@@ -208,6 +208,12 @@ function printOnScreen(){
 
     document.getElementById("feedback").style.display = "none";
 
+    document.querySelector('#valores').innerHTML = (
+        "Vca = " + formValues.vca + " V, Ica = " + formValues.ica + " A, Pca = " + formValues.pca + " W, " +
+        "Vcc = " + formValues.vcc + " V, Icc = " + formValues.icc + " A, Pcc = " + formValues.pcc + " W, " +
+        "<br>Vp = " + formValues.vp + " V, Vs = " + formValues.vs + " V"
+    );
+
     document.querySelector('#realcont').innerHTML = (
     "<img src='https://imgur.com/1H6TIY9.png' style='max-width: 100%' alt='Circuito Real'><br>R<sub>1</sub> = " 
     + finalValues.rp + "Ω"+"<br>"+
