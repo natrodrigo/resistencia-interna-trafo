@@ -241,7 +241,7 @@ function printOnScreen(){
     "<img src='https://imgur.com/JbtPXPK.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>1</sub>' = " 
     + formValues.vs + "V"+"<br>"+
     "R<sub>1</sub>' = " + finalValues.rs + "Ω"+"<br>"+
-    "jX<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
+    "X<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
     "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
     "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
     "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
