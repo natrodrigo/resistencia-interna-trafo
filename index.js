@@ -227,11 +227,11 @@ function printOnScreen(){
     "Perdas no cobre = " + finalValues.pcu + "W");
     
     document.querySelector('#tp').innerHTML = (
-    "<img src='https://imgur.com/nGztdtn.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
+    "<img src='https://imgur.com/NzGT3sf.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
     + formValues.vp + "V"+"<br>"+
     "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
     "R<sub>1</sub> = " + finalValues.rp + "Ω"+"<br>"+
-    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
+    "X<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
     "R<sub>2</sub>' = " + finalValues.rp + "Ω"+"<br>"+
