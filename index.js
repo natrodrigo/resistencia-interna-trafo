@@ -220,49 +220,49 @@ function printOnScreen(){
     + finalValues.rp + "Ω"+"<br>"+
     "X<sub>l1</sub> = " + finalValues.xp + "Ω"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
-    "X<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
+    "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
     "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
-    "X<sub>l2</sub> = " + finalValues.xs + "Ω"+"<br>"+
+    "jX<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
     "Perdas no núcleo = " + finalValues.pnucleo + "W"+"<br>"+
     "Perdas no cobre = " + finalValues.pcu + "W");
     
     document.querySelector('#tp').innerHTML = (
-    "<img src='https://imgur.com/nGztdtn.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>p</sub> = " 
+    "<img src='https://imgur.com/nGztdtn.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
     + formValues.vp + "V"+"<br>"+
-    "aV<sub>s</sub> = " + formValues.vp + "V"+"<br>"+
-    "R<sub>p</sub> = " + finalValues.rp + "Ω"+"<br>"+
-    "jX<sub>p</sub> = " + finalValues.xp + "Ω"+"<br>"+
+    "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
+    "R<sub>1</sub> = " + finalValues.rp + "Ω"+"<br>"+
+    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
-    "a²R<sub>s</sub> = " + finalValues.rp + "Ω"+"<br>"+
-    "ja²X<sub>s</sub> = " + finalValues.xp + "Ω");
+    "R<sub>2</sub>' = " + finalValues.rp + "Ω"+"<br>"+
+    "X<sub>2</sub>' = " + finalValues.xp + "Ω");
 
     document.querySelector('#ts').innerHTML = (
-    "<img src='https://imgur.com/JbtPXPK.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>p</sub>/a = " 
+    "<img src='https://imgur.com/JbtPXPK.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>1</sub>' = " 
     + formValues.vs + "V"+"<br>"+
-    "R<sub>p</sub>/a² = " + finalValues.rs + "V"+"<br>"+
-    "jX<sub>p</sub>/a² = " + finalValues.xs + "Ω"+"<br>"+
-    "R<sub>c</sub>/a² = " + finalValues.rc_s + "Ω"+"<br>"+
-    "V<sub>s</sub> = " + formValues.vs + "V"+"<br>"+
-    "R<sub>s</sub> = " + finalValues.rs + "Ω"+"<br>"+
-    "jX<sub>s</sub> = " + finalValues.xs + "Ω"+"<br>"+
-    "jX<sub>m</sub>/a² = " + finalValues.xm_s + "Ω");
+    "R<sub>1</sub>' = " + finalValues.rs + "Ω"+"<br>"+
+    "jX<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
+    "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
+    "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
+    "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
+    "X<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
+    "jX<sub>m</sub>' = " + finalValues.xm_s + "Ω");
 
     document.querySelector('#lp').innerHTML = (
-    "<img src='https://imgur.com/TcLwEsl.png' style='max-width: 100%' alt='Circuito L Primário'><br>V<sub>p</sub> = " 
+    "<img src='https://imgur.com/TcLwEsl.png' style='max-width: 100%' alt='Circuito L Primário'><br>V<sub>1</sub> = " 
     + formValues.vp + "V"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
-    "aV<sub>s</sub> = " + formValues.vp + "V"+"<br>"+
+    "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
     "R<sub>eq(p)</sub> = " + finalValues.req_p + "Ω"+"<br>"+
-    "jX<sub>eq(p)</sub> = " + finalValues.xeq_p + "Ω");
+    "X<sub>eq(p)</sub> = " + finalValues.xeq_p + "Ω");
     
     document.querySelector('#ls').innerHTML = (
-    "<img src='https://imgur.com/jDxNmBi.png' style='max-width: 100%' alt='Circuito L Secundário'><br>V<sub>p</sub>/a = " 
+    "<img src='https://imgur.com/jDxNmBi.png' style='max-width: 100%' alt='Circuito L Secundário'><br>V<sub>1</sub>' = " 
     + formValues.vs + "V"+"<br>"+
-    "R<sub>c</sub>/a² = " + finalValues.rc_s + "Ω"+"<br>"+
-    "jX<sub>m</sub>/a²= " + finalValues.xm_s + "Ω"+"<br>"+
-    "V<sub>s</sub> = " + formValues.vs + "V"+"<br>"+
+    "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
+    "jX<sub>m</sub>'= " + finalValues.xm_s + "Ω"+"<br>"+
+    "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
     "R<sub>eq(s)</sub> = " + finalValues.req_s + "Ω"+"<br>"+
     "jX<sub>eq(s)</sub> = " + finalValues.xeq_s + "Ω");
     
