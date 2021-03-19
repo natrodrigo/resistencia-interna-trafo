@@ -218,7 +218,7 @@ function printOnScreen(){
     document.querySelector('#realcont').innerHTML = (
     "<img src='https://imgur.com/2EK6nrx.png' style='max-width: 100%' alt='Circuito Real'><br>R<sub>1</sub> = " 
     + finalValues.rp + "Ω"+"<br>"+
-    "X<sub>l1</sub> = " + finalValues.xp + "Ω"+"<br>"+
+    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
     "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
