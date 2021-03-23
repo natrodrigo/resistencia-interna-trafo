@@ -227,38 +227,38 @@ function printOnScreen(){
     "Perdas no cobre = " + finalValues.pcu + "W");
     
     document.querySelector('#tp').innerHTML = (
-    "<img src='https://imgur.com/NzGT3sf.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
+    "<img src='https://imgur.com/U8TEbdh.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
     + formValues.vp + "V"+"<br>"+
     "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
     "R<sub>1</sub> = " + finalValues.rp + "Ω"+"<br>"+
-    "X<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
+    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
     "R<sub>2</sub>' = " + finalValues.rp + "Ω"+"<br>"+
-    "X<sub>2</sub>' = " + finalValues.xp + "Ω");
+    "jX<sub>2</sub>' = " + finalValues.xp + "Ω");
 
     document.querySelector('#ts').innerHTML = (
-    "<img src='https://imgur.com/JbtPXPK.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>1</sub>' = " 
+    "<img src='https://imgur.com/VDLsWtB.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>1</sub>' = " 
     + formValues.vs + "V"+"<br>"+
     "R<sub>1</sub>' = " + finalValues.rs + "Ω"+"<br>"+
-    "X<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
+    "jX<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
     "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
     "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
     "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
-    "X<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
+    "jX<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
     "jX<sub>m</sub>' = " + finalValues.xm_s + "Ω");
 
     document.querySelector('#lp').innerHTML = (
-    "<img src='https://imgur.com/TcLwEsl.png' style='max-width: 100%' alt='Circuito L Primário'><br>V<sub>1</sub> = " 
+    "<img src='https://imgur.com/hOfL96s.png' style='max-width: 100%' alt='Circuito L Primário'><br>V<sub>1</sub> = " 
     + formValues.vp + "V"+"<br>"+
     "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
     "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
     "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
     "R<sub>eq(p)</sub> = " + finalValues.req_p + "Ω"+"<br>"+
-    "X<sub>eq(p)</sub> = " + finalValues.xeq_p + "Ω");
+    "jX<sub>eq(p)</sub> = " + finalValues.xeq_p + "Ω");
     
     document.querySelector('#ls').innerHTML = (
-    "<img src='https://imgur.com/jDxNmBi.png' style='max-width: 100%' alt='Circuito L Secundário'><br>V<sub>1</sub>' = " 
+    "<img src='https://imgur.com/6NbinzO.png' style='max-width: 100%' alt='Circuito L Secundário'><br>V<sub>1</sub>' = " 
     + formValues.vs + "V"+"<br>"+
     "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
     "jX<sub>m</sub>'= " + finalValues.xm_s + "Ω"+"<br>"+
