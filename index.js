@@ -196,7 +196,7 @@ function decimal(value){
         return value.toFixed(2) + "k";
     }
     if (value < 1){
-        value = value * 1000
+        value = value * 1000;
         return value.toFixed(2) + "m";
     }
     else{
