@@ -84,8 +84,8 @@ function getElementFromForms(){
     formValues.vcc = document.getElementById("vcc").value.replace(",", ".");
     formValues.icc = document.getElementById("icc").value.replace(",", ".");
     formValues.pcc = document.getElementById("pcc").value.replace(",", ".");
-    formValues.vp = document.getElementById("vs").value.replace(",", ".");
-    formValues.vs = document.getElementById("vp").value.replace(",", ".");
+    formValues.vp = document.getElementById("vp").value.replace(",", ".");
+    formValues.vs = document.getElementById("vs").value.replace(",", ".");
     
     medca  = document.querySelector('input[name="medicao1"]:checked').value;
     medcc = document.querySelector('input[name="medicao2"]:checked').value;
@@ -132,10 +132,10 @@ function mathCalculate(){
         finalValues.rc_p = (formValues.vca ** 2) / formValues.pca;
         finalValues.z_phi_p = formValues.vca / formValues.ica;
         finalValues.xm_p = 1 / Math.sqrt(((1 / finalValues.z_phi_p)**2) - ((1/finalValues.rc_p)**2));
-    
         finalValues.rc_s = finalValues.rc_p / finalValues.a**2;
         finalValues.z_phi_s = finalValues.z_phi_p / finalValues.a**2;
         finalValues.xm_s = finalValues.xm_p / finalValues.a**2;
+
     }
 
     else{
@@ -143,7 +143,6 @@ function mathCalculate(){
         finalValues.z_phi_s = formValues.vca / formValues.ica;
         finalValues.xm_s = 1 / Math.sqrt(((1 / finalValues.z_phi_s)**2) - ((1/finalValues.rc_s)**2));
         
-
         finalValues.rc_p = finalValues.rc_s * finalValues.a**2;
         finalValues.z_phi_p = finalValues.z_phi_s * finalValues.a**2;
         finalValues.xm_p = finalValues.xm_s * finalValues.a**2;
@@ -177,12 +176,12 @@ function mathCalculate(){
     finalValues.xp  = finalValues.xeq_p / 2;
     finalValues.rs = finalValues.req_s / 2;
     finalValues.xs = finalValues.xeq_s / 2;
-
+    
+    
 }
 
 
 function formatFinalValues(){
-
     for (var [key] of Object.entries(finalValues)) {
         finalValues[key] = decimal(finalValues[key]);
     }
@@ -193,11 +192,11 @@ function decimal(value){
 
     if (value > 999.999){
         value = value / 1000;
-        return value.toFixed(2) + "k";
+        return value.toFixed(2)+ "k";
     }
     if (value < 1){
         value = value * 1000;
-        return value.toFixed(2) + "m";
+        return value.toFixed(2)+ "m";
     }
     else{
         return value.toFixed(2);
@@ -206,7 +205,6 @@ function decimal(value){
 
 
 function printOnScreen(){
-    console.log("SIM")
     document.getElementById("feedback").style.display = "none";
 
     document.querySelector('#valores').innerHTML = (
