@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://imgur.com/TKAYTUl.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Como usar o aplicativo</title>
+</head>
+<body>
+    <div class="container" id="divforms" style="margin-top: 20px;">
+        <h2>Qual o objetivo do aplicativo?</h2>
+        <hr>
+        <p>Quando estudamos o transformador pela primeira vez, lidamos com o <strong>transformador ideal</strong>,
+        e nele desprezamos todas as perdas. Entretanto, quando estudamos o transformador real, devemos levar em conta suas perdas, a saber:
+        <ul>
+            <li><strong>Perdas no cobre ou também chamadas perdas I²R</strong></li>
+            <p>
+                São perdas causadas pelo aquecimento resistivo no enrolamento primário e secundário do transformador.
+                <br>São representadas por uma <strong>resistência em série (R<sub>1</sub> e R<sub>2</sub>)</strong> nos enrolamentos primário e  secundário de transformador.
+            </p>
+
+            <li><strong>Perdas por corrente parasita</strong></li>
+            <p>
+                São perdas causadas pelo aquecimento resistivo no núcleo do transformador.
+                <br>É representada por <strong>uma resistência (R<sub>C</sub>) em paralelo</strong> com um dos enrolamentos do transformador.
+            </p>
+
+            <li><strong>Perdas por histerese</strong></li>
+            <p> 
+                São perdas devido ao tempo necessário para que os domínios magnéticos
+                 do transformador se reorganizem em cada semiciclo.
+                 <br>É representada por <strong>uma indutância (jX<sub>m</sub>) em paralelo</strong> com um 
+                 dos enrolamentos do transformador.
+            </p>
+
+            <li><strong>Fluxo de dispersão</strong></li>
+            <p> 
+                O fluxo de dispersão é parte do fluxo magnético que escapa do núcleo 
+                e passa através de apenas um dos enrolamentos do transformador, 
+                causando um indutância indesejada no primário e no secundário.
+                <br>É representada por <strong>uma indutância em série (jX<sub>1</sub> e jX<sub>2</sub>)</strong>  com cada enrolamento do transformador.
+            </p>
+        </ul>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/2EK6nrx.png" style="max-width:80%;" alt="circuito equivalente de trafo">
+        </div>
+        <p>
+            O objetivo do aplicativo, então, é calcular automaticamente os valores destas
+            resistências e indutâncias a partir dos dados dos <strong>ensaios de circuito aberto e curto circuito</strong>.</p>
+        </p>
+        <h2>Ensaio de circuito aberto e de curto circuito</h2>
+        <hr>
+        <p>
+            Para determinar os valores das resistências e impedâncias, precisamos realizar dois ensaios no transformador:
+            <ul>
+                <li>Aplicar um valor de tensão no primário com o circuito do secundário aberto (ou vice-versa) e medir a corrente com um amperímetro e potência com um watímetro.</li> 
+                <li>Aplicar um valor de tensão no primário com o secundário em curto circuito (ou vice-versa) e medir a corrente com um amperímetro e potência com um watímetro.</li> 
+            </ul> 
+            Se consegue então, a partir destes ensaios:
+            <ul>
+                <li><strong>V<sub>ca</sub> : </strong>Tensão aplicada no ensaio de circuito aberto.</li>
+                <li><strong>I<sub>ca</sub> : </strong>Corrente medida pelo amperímetro no ensaio de circuito aberto.</li>
+                <li><strong>P<sub>ca</sub> : </strong>Potência medida pelo watímetro no ensaio de circuito aberto.</li>
+                <li><strong>V<sub>cc</sub> : </strong>Tensão aplicada no ensaio de curto circuito.</li>
+                <li><strong>I<sub>cc</sub> : </strong>Corrente medida pelo amperímetro no ensaio de curto circuito.</li>
+                <li><strong>P<sub>cc</sub> : </strong>Corrente medida pelo watímetro no ensaio de curto circuito.</li>
+            </ul>
+        </p>
+        <h2>Fórmulas internas do aplicativo</h2>
+        <hr>
+        <p>Se consegue o valor de R<sub>c</sub> dividindo o quadrado de V<sub>ca </sub> por P<sub>ca</sub>:</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/Q3Ed1um.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>Se consegue o valor de Z<sub>(&#966;)</sub> dividindo V<sub>ca </sub> por I<sub>ca</sub>:</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/dFk2UGz.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>E usando R<sub>c</sub> e Z<sub>(&#966;)</sub>, conseguimos o valor de X<sub>m</sub> (jX<sub>m</sub>):</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/j0NymYk.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <hr>
+        <p>Para conseguir o valor da impedância equivalente Z<sub>eq</sub>, dividimos V<sub>cc </sub> por I<sub>cc</sub>:</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/4wN3bnF.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>Para conseguir o valor da resistência equivalente R<sub>eq</sub>, dividimos P<sub>cc </sub> por I<sub>cc</sub> elevado ao quadrado:</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/3ibmd3d.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>O valor da indutância equivalente é obtido usando Z<sub>eq</sub> e R<sub>eq</sub> (Z<sub>cc</sub> e R<sub>cc</sub>, respectivamente):</p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/CkL14D5.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>
+            Um detalhe <strong>extremamente importante</strong> é que os valores obtidos são relativos
+             ao lado do transformador em que o ensaio foi realizado.<br>
+             Por exemplo:<br> Realizando o ensaio de circuito aberto aplicando tensão no secundário 
+             enquanto o primário está aberto, obteremos os valores de V<sub>ca</sub>, I<sub>ca</sub> e P<sub>ca</sub>,
+             mas ao calcularmos o valor de R<sub>c</sub> usando a fórmula apresentada, obteremos R<sub>c</sub>', 
+             ou seja, o valor de R<sub>c</sub> "visto" do lado secundário do transformador. 
+             O mesmo vale para X<sub>m</sub>, Z<sub>(&#966;)</sub>, Z<sub>eq</sub>, R<sub>eq</sub>, X<sub>eq</sub> e etc.
+             <br>Para obter então o valor de R<sub>c</sub> "visto" do lado primário, 
+             é necessário multiplicar o valor de R<sub>c</sub> "visto" do secundário por a².<br>
+             Da mesma forma, para obter os valores "vistos" pelo lado de secundário, devemos dividir por a² os valores "vistos" pelo lado primário.             
+        </p>
+        <div class="d-flex justify-content-center">
+            <img src="https://imgur.com/8Faj0w3.png" style="max-width:80%;" alt="formula 1">
+        </div>
+        <p>
+            Por este motivo, é importante se atentar em marcar corretamente para o 
+            aplicativo o lado em que foi realizado cada ensaio transformador.
+        </p>
+    </div>
+    
+    
+<footer class="small text-center text-muted" style="margin:90px 0px 0px 0px" >
+    Desenvolvido por Natã Rodrigo. Visite meu perfil no <a href="https://github.com/natrodrigo" target="_blank">Github</a>.
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
