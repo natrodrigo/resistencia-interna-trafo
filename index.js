@@ -109,7 +109,7 @@ function validateDataFromForms(){
 function validate(value){ 
 
     if (value==null || value == "" || value <= 0 || isNaN(value)){
-         document.querySelector('#feedback').innerHTML = "Os valores não podem estar vazios, conter letras ou serem iguais ou menor que zero.";
+         document.querySelector('#feedback').innerHTML = "Os campos não podem estar vazios, conter letras e os valores não podem ser iguais ou menor que zero.";
          document.getElementById("feedback").style.display = "block";
          flag = 1;
     }
