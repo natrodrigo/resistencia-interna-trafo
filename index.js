@@ -192,14 +192,14 @@ function decimal(value){
 
     if (value > 999.999){
         value = value / 1000;
-        return value.toFixed(2)+ "k";
+        return value.toFixed(2)+ " k";
     }
     if (value < 1){
         value = value * 1000;
-        return value.toFixed(2)+ "m";
+        return value.toFixed(2)+ " m";
     }
     else{
-        return value.toFixed(2);
+        return value.toFixed(2)+" ";
     }
 }
 
@@ -210,59 +210,59 @@ function printOnScreen(){
     document.querySelector('#valores').innerHTML = (
         `Vca = ${formValues.vca} V, Ica = ${formValues.ica} A, Pca = ${formValues.pca} W, 
         Vcc = ${formValues.vcc} V, Icc = ${formValues.icc} A, Pcc = ${formValues.pcc} W,
-        <br>Vp = ${formValues.vp} V, Vs = ${formValues.vs} V`
+        <br>Vp = ${formValues.vp}V, Vs = ${formValues.vs}V`
     );
 
     document.querySelector('#realcont').innerHTML = (
     `<img src='https://imgur.com/2EK6nrx.png' style='max-width: 100%' alt='Circuito Real'><br>
-    R<sub>1</sub> = ${finalValues.rp} Ω<br>
-    jX<sub>1</sub> = ${finalValues.xp} H<br>
-    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
-    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
-    R<sub>2</sub> = ${finalValues.rs} Ω<br>
-    jX<sub>2</sub> = ${finalValues.xs} H<br>
-    Perdas no núcleo = ${finalValues.pnucleo} W<br>
-    Perdas no cobre = ${finalValues.pcu} W`);
+    R<sub>1</sub> = ${finalValues.rp}Ω<br>
+    jX<sub>1</sub> = ${finalValues.xp}H<br>
+    R<sub>c</sub> = ${finalValues.rc_p}Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p}H<br>
+    R<sub>2</sub> = ${finalValues.rs}Ω<br>
+    jX<sub>2</sub> = ${finalValues.xs}H<br>
+    Perdas no núcleo = ${finalValues.pnucleo}W<br>
+    Perdas no cobre = ${finalValues.pcu}W`);
     
     document.querySelector('#tp').innerHTML = (
     `<img src='https://imgur.com/U8TEbdh.png' style='max-width: 100%' alt='Circuito T Primário'><br>
-    V<sub>1</sub> = ${formValues.vp} V<br>
-    V<sub>2</sub>' = ${formValues.vp} V<br>
-    R<sub>1</sub> = ${finalValues.rp} Ω<br>
-    jX<sub>1</sub> = ${finalValues.xp} H<br>
-    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
-    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
-    R<sub>2</sub>' = ${finalValues.rp} Ω<br>
-    jX<sub>2</sub>' = ${finalValues.xp} H`);
+    V<sub>1</sub> = ${formValues.vp}V<br>
+    V<sub>2</sub>' = ${formValues.vp}V<br>
+    R<sub>1</sub> = ${finalValues.rp}Ω<br>
+    jX<sub>1</sub> = ${finalValues.xp}H<br>
+    R<sub>c</sub> = ${finalValues.rc_p}Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p}H<br>
+    R<sub>2</sub>' = ${finalValues.rp}Ω<br>
+    jX<sub>2</sub>' = ${finalValues.xp}H`);
 
     document.querySelector('#ts').innerHTML = (
     `<img src='https://imgur.com/VDLsWtB.png' style='max-width: 100%' alt='Circuito T Secundário'><br>
-    V<sub>1</sub>' = ${formValues.vs} V<br>
-    R<sub>1</sub>' = ${finalValues.rs} Ω<br>
-    jX<sub>1</sub>' = ${finalValues.xs} H<br>
-    R<sub>c</sub>' = ${finalValues.rc_s} Ω<br>
-    V<sub>2</sub> = ${formValues.vs} V<br>
-    R<sub>2</sub> = ${finalValues.rs} Ω<br>
-    jX<sub>2</sub> = ${finalValues.xs} H<br>
-    jX<sub>m</sub>' = ${finalValues.xm_s} H`);
+    V<sub>1</sub>' = ${formValues.vs}V<br>
+    R<sub>1</sub>' = ${finalValues.rs}Ω<br>
+    jX<sub>1</sub>' = ${finalValues.xs}H<br>
+    R<sub>c</sub>' = ${finalValues.rc_s}Ω<br>
+    V<sub>2</sub> = ${formValues.vs}V<br>
+    R<sub>2</sub> = ${finalValues.rs}Ω<br>
+    jX<sub>2</sub> = ${finalValues.xs}H<br>
+    jX<sub>m</sub>' = ${finalValues.xm_s}H`);
 
     document.querySelector('#lp').innerHTML = (
     `<img src='https://imgur.com/hOfL96s.png' style='max-width: 100%' alt='Circuito L Primário'><br>
-    V<sub>1</sub> = ${formValues.vp} V<br>
-    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
-    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
-    V<sub>2</sub>' = ${formValues.vp} V<br>
-    R<sub>eq(p)</sub> = ${finalValues.req_p} Ω<br>
-    jX<sub>eq(p)</sub> = ${finalValues.xeq_p} H`);
+    V<sub>1</sub> = ${formValues.vp}V<br>
+    R<sub>c</sub> = ${finalValues.rc_p}Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p}H<br>
+    V<sub>2</sub>' = ${formValues.vp}V<br>
+    R<sub>eq(p)</sub> = ${finalValues.req_p}Ω<br>
+    jX<sub>eq(p)</sub> = ${finalValues.xeq_p}H`);
     
     document.querySelector('#ls').innerHTML = (
     `<img src='https://imgur.com/6NbinzO.png' style='max-width: 100%' alt='Circuito L Secundário'><br>
-    V<sub>1</sub>' = ${formValues.vs} V<br>
-    R<sub>c</sub>' = ${finalValues.rc_s} Ω<br>
-    jX<sub>m</sub>' = ${finalValues.xm_s} H<br>
-    V<sub>2</sub> = ${formValues.vs} V<br>
-    R<sub>eq(s)</sub> = ${finalValues.req_s} Ω<br>
-    jX<sub>eq(s)</sub> = ${finalValues.xeq_s} H`);
+    V<sub>1</sub>' = ${formValues.vs}V<br>
+    R<sub>c</sub>' = ${finalValues.rc_s}Ω<br>
+    jX<sub>m</sub>' = ${finalValues.xm_s}H<br>
+    V<sub>2</sub> = ${formValues.vs}V<br>
+    R<sub>eq(s)</sub> = ${finalValues.req_s}Ω<br>
+    jX<sub>eq(s)</sub> = ${finalValues.xeq_s}H`);
     
 
     document.getElementById("divforms").style.display = "none";
