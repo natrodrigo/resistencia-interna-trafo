@@ -227,24 +227,24 @@ function printOnScreen(){
     document.querySelector('#tp').innerHTML = (
     `<img src='https://imgur.com/U8TEbdh.png' style='max-width: 100%' alt='Circuito T Primário'><br>
     V<sub>1</sub> = ${formValues.vp} V<br>
-    V<sub>2</sub> = ${formValues.vp} V<br>
+    V<sub>2</sub>' = ${formValues.vp} V<br>
     R<sub>1</sub> = ${finalValues.rp} Ω<br>
     jX<sub>1</sub> = ${finalValues.xp} H<br>
     R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
     jX<sub>m</sub> = ${finalValues.xm_p} H<br>
-    R<sub>2</sub> = ${finalValues.rp} Ω<br>
-    jX<sub>2</sub> = ${finalValues.xp} H`);
+    R<sub>2</sub>' = ${finalValues.rp} Ω<br>
+    jX<sub>2</sub>' = ${finalValues.xp} H`);
 
     document.querySelector('#ts').innerHTML = (
     `<img src='https://imgur.com/VDLsWtB.png' style='max-width: 100%' alt='Circuito T Secundário'><br>
-    V<sub>1</sub> = ${formValues.vs} V<br>
-    R<sub>1</sub> = ${finalValues.rs} Ω<br>
-    jX<sub>1</sub> = ${finalValues.xs} H<br>
-    R<sub>c</sub> = ${finalValues.rc_s} Ω<br>
+    V<sub>1</sub>' = ${formValues.vs} V<br>
+    R<sub>1</sub>' = ${finalValues.rs} Ω<br>
+    jX<sub>1</sub>' = ${finalValues.xs} H<br>
+    R<sub>c</sub>' = ${finalValues.rc_s} Ω<br>
     V<sub>2</sub> = ${formValues.vs} V<br>
     R<sub>2</sub> = ${finalValues.rs} Ω<br>
     jX<sub>2</sub> = ${finalValues.xs} H<br>
-    jX<sub>m</sub> = ${finalValues.xm_s} H`);
+    jX<sub>m</sub>' = ${finalValues.xm_s} H`);
 
     document.querySelector('#lp').innerHTML = (
     `<img src='https://imgur.com/hOfL96s.png' style='max-width: 100%' alt='Circuito L Primário'><br>
@@ -257,9 +257,9 @@ function printOnScreen(){
     
     document.querySelector('#ls').innerHTML = (
     `<img src='https://imgur.com/6NbinzO.png' style='max-width: 100%' alt='Circuito L Secundário'><br>
-    V<sub>1</sub> = ${formValues.vs} V<br>
-    R<sub>c</sub> = ${finalValues.rc_s} Ω<br>
-    jX<sub>m</sub> = ${finalValues.xm_s} H<br>
+    V<sub>1</sub>' = ${formValues.vs} V<br>
+    R<sub>c</sub>' = ${finalValues.rc_s} Ω<br>
+    jX<sub>m</sub>' = ${finalValues.xm_s} H<br>
     V<sub>2</sub> = ${formValues.vs} V<br>
     R<sub>eq(s)</sub> = ${finalValues.req_s} Ω<br>
     jX<sub>eq(s)</sub> = ${finalValues.xeq_s} H`);
