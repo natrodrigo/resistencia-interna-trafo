@@ -208,61 +208,61 @@ function printOnScreen(){
     document.getElementById("feedback").style.display = "none";
 
     document.querySelector('#valores').innerHTML = (
-        "Vca = " + formValues.vca + " V, Ica = " + formValues.ica + " A, Pca = " + formValues.pca + " W, " +
-        "Vcc = " + formValues.vcc + " V, Icc = " + formValues.icc + " A, Pcc = " + formValues.pcc + " W, " +
-        "<br>Vp = " + formValues.vp + " V, Vs = " + formValues.vs + " V"
+        `Vca = ${formValues.vca} V, Ica = ${formValues.ica} A, Pca = ${formValues.pca} W, 
+        Vcc = ${formValues.vcc} V, Icc = ${formValues.icc} A, Pcc = ${formValues.pcc} W,
+        <br>Vp = ${formValues.vp} V, Vs = ${formValues.vs} V`
     );
 
     document.querySelector('#realcont').innerHTML = (
-    "<img src='https://imgur.com/2EK6nrx.png' style='max-width: 100%' alt='Circuito Real'><br>R<sub>1</sub> = " 
-    + finalValues.rp + "Ω"+"<br>"+
-    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
-    "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
-    "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
-    "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
-    "jX<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
-    "Perdas no núcleo = " + finalValues.pnucleo + "W"+"<br>"+
-    "Perdas no cobre = " + finalValues.pcu + "W");
+    `<img src='https://imgur.com/2EK6nrx.png' style='max-width: 100%' alt='Circuito Real'><br>
+    R<sub>1</sub> = ${finalValues.rp} Ω<br>
+    jX<sub>1</sub> = ${finalValues.xp} H<br>
+    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
+    R<sub>2</sub> = ${finalValues.rs} Ω<br>
+    jX<sub>2</sub> = ${finalValues.xs} H<br>
+    Perdas no núcleo = ${finalValues.pnucleo} W<br>
+    Perdas no cobre = ${finalValues.pcu} W`);
     
     document.querySelector('#tp').innerHTML = (
-    "<img src='https://imgur.com/U8TEbdh.png' style='max-width: 100%' alt='Circuito T Primário'><br>V<sub>1</sub> = " 
-    + formValues.vp + "V"+"<br>"+
-    "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
-    "R<sub>1</sub> = " + finalValues.rp + "Ω"+"<br>"+
-    "jX<sub>1</sub> = " + finalValues.xp + "Ω"+"<br>"+
-    "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
-    "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
-    "R<sub>2</sub>' = " + finalValues.rp + "Ω"+"<br>"+
-    "jX<sub>2</sub>' = " + finalValues.xp + "Ω");
+    `<img src='https://imgur.com/U8TEbdh.png' style='max-width: 100%' alt='Circuito T Primário'><br>
+    V<sub>1</sub> = ${formValues.vp} V<br>
+    V<sub>2</sub> = ${formValues.vp} V<br>
+    R<sub>1</sub> = ${finalValues.rp} Ω<br>
+    jX<sub>1</sub> = ${finalValues.xp} H<br>
+    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
+    R<sub>2</sub> = ${finalValues.rp} Ω<br>
+    jX<sub>2</sub> = ${finalValues.xp} H`);
 
     document.querySelector('#ts').innerHTML = (
-    "<img src='https://imgur.com/VDLsWtB.png' style='max-width: 100%' alt='Circuito T Secundário'><br>V<sub>1</sub>' = " 
-    + formValues.vs + "V"+"<br>"+
-    "R<sub>1</sub>' = " + finalValues.rs + "Ω"+"<br>"+
-    "jX<sub>1</sub>' = " + finalValues.xs + "Ω"+"<br>"+
-    "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
-    "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
-    "R<sub>2</sub> = " + finalValues.rs + "Ω"+"<br>"+
-    "jX<sub>2</sub> = " + finalValues.xs + "Ω"+"<br>"+
-    "jX<sub>m</sub>' = " + finalValues.xm_s + "Ω");
+    `<img src='https://imgur.com/VDLsWtB.png' style='max-width: 100%' alt='Circuito T Secundário'><br>
+    V<sub>1</sub> = ${formValues.vs} V<br>
+    R<sub>1</sub> = ${finalValues.rs} Ω<br>
+    jX<sub>1</sub> = ${finalValues.xs} H<br>
+    R<sub>c</sub> = ${finalValues.rc_s} Ω<br>
+    V<sub>2</sub> = ${formValues.vs} V<br>
+    R<sub>2</sub> = ${finalValues.rs} Ω<br>
+    jX<sub>2</sub> = ${finalValues.xs} H<br>
+    jX<sub>m</sub> = ${finalValues.xm_s} H`);
 
     document.querySelector('#lp').innerHTML = (
-    "<img src='https://imgur.com/hOfL96s.png' style='max-width: 100%' alt='Circuito L Primário'><br>V<sub>1</sub> = " 
-    + formValues.vp + "V"+"<br>"+
-    "R<sub>c</sub> = " + finalValues.rc_p + "Ω"+"<br>"+
-    "jX<sub>m</sub> = " + finalValues.xm_p + "Ω"+"<br>"+
-    "V<sub>2</sub>' = " + formValues.vp + "V"+"<br>"+
-    "R<sub>eq(p)</sub> = " + finalValues.req_p + "Ω"+"<br>"+
-    "jX<sub>eq(p)</sub> = " + finalValues.xeq_p + "Ω");
+    `<img src='https://imgur.com/hOfL96s.png' style='max-width: 100%' alt='Circuito L Primário'><br>
+    V<sub>1</sub> = ${formValues.vp} V<br>
+    R<sub>c</sub> = ${finalValues.rc_p} Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_p} H<br>
+    V<sub>2</sub>' = ${formValues.vp} V<br>
+    R<sub>eq(p)</sub> = ${finalValues.req_p} Ω<br>
+    jX<sub>eq(p)</sub> = ${finalValues.xeq_p} H`);
     
     document.querySelector('#ls').innerHTML = (
-    "<img src='https://imgur.com/6NbinzO.png' style='max-width: 100%' alt='Circuito L Secundário'><br>V<sub>1</sub>' = " 
-    + formValues.vs + "V"+"<br>"+
-    "R<sub>c</sub>' = " + finalValues.rc_s + "Ω"+"<br>"+
-    "jX<sub>m</sub>'= " + finalValues.xm_s + "Ω"+"<br>"+
-    "V<sub>2</sub> = " + formValues.vs + "V"+"<br>"+
-    "R<sub>eq(s)</sub> = " + finalValues.req_s + "Ω"+"<br>"+
-    "jX<sub>eq(s)</sub> = " + finalValues.xeq_s + "Ω");
+    `<img src='https://imgur.com/6NbinzO.png' style='max-width: 100%' alt='Circuito L Secundário'><br>
+    V<sub>1</sub> = ${formValues.vs} V<br>
+    R<sub>c</sub> = ${finalValues.rc_s} Ω<br>
+    jX<sub>m</sub> = ${finalValues.xm_s} H<br>
+    V<sub>2</sub> = ${formValues.vs} V<br>
+    R<sub>eq(s)</sub> = ${finalValues.req_s} Ω<br>
+    jX<sub>eq(s)</sub> = ${finalValues.xeq_s} H`);
     
 
     document.getElementById("divforms").style.display = "none";
