@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function getElementFromForms(){
 
-    formValues.vca = document.getElementById("vca").value.replace(",", ".");
-    formValues.ica = document.getElementById("ica").value.replace(",", ".");
-    formValues.pca = document.getElementById("pca").value.replace(",", ".");
-    formValues.vcc = document.getElementById("vcc").value.replace(",", ".");
-    formValues.icc = document.getElementById("icc").value.replace(",", ".");
-    formValues.pcc = document.getElementById("pcc").value.replace(",", ".");
-    formValues.vp = document.getElementById("vp").value.replace(",", ".");
-    formValues.vs = document.getElementById("vs").value.replace(",", ".");
+    formValues.vca = document.getElementById("vca").value.replace(",", ".").trim();
+    formValues.ica = document.getElementById("ica").value.replace(",", ".").trim();
+    formValues.pca = document.getElementById("pca").value.replace(",", ".").trim();
+    formValues.vcc = document.getElementById("vcc").value.replace(",", ".").trim();
+    formValues.icc = document.getElementById("icc").value.replace(",", ".").trim();
+    formValues.pcc = document.getElementById("pcc").value.replace(",", ".").trim();
+    formValues.vp = document.getElementById("vp").value.replace(",", ".").trim();
+    formValues.vs = document.getElementById("vs").value.replace(",", ".").trim();
     
     medca  = document.querySelector('input[name="medicao1"]:checked').value;
     medcc = document.querySelector('input[name="medicao2"]:checked').value;
